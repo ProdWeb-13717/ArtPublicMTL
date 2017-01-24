@@ -10,7 +10,7 @@
                     <?php
             if($data["urlImage"]!=""){
                
-        ?> <a href=".mages/<?php echo $data["urlImage"];?>"><img class="photo" src=" images/<?php echo $data["urlImage"]?>" alt = " <?php echo $data["titre"] ?>"/></a>
+        ?> <a href="images/<?php echo $data["urlImage"];?>"><img class="photo" src=" images/<?php echo $data["urlImage"]?>" alt = " <?php echo $data["titre"] ?>"/></a>
                     
                         <?php
             }

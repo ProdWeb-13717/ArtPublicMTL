@@ -15,7 +15,7 @@
                 <?php
     foreach($data as $oeuvres){
        
-            echo "<li class='titreOeuvres'><a id='{$oeuvres["id"]}' href='./index.php?public&action=details&id={$oeuvres["id"]}'>{$oeuvres["titre"]}</a></li>";
+            echo "<li class='titreOeuvres'><a id='{$oeuvres["id"]}' href='./index.php?Public&action=details&id={$oeuvres["id"]}'>{$oeuvres["titre"]}</a></li>";
             
             // fabrication de l'indoWindow du curseur de la map
             $divInfo = "<div class='infoWindow'>";
@@ -31,7 +31,7 @@
             $divInfo .= "<section><a href='./index.php?public&action=details&id=" . $oeuvres["id"] . "'>";
             $divInfo .= $oeuvres["titre"];
             $divInfo .= "</a><br>";
-            $divInfo .= "<a href='./index.php?public&action=descriptionArtiste&id=" . $oeuvres["idArtiste"] . "'>";
+            $divInfo .= "<a href='./index.php?Public&action=descriptionArtiste&id=" . $oeuvres["idArtiste"] . "'>";
             if(isset($oeuvres["prenom"])){
                 $divInfo .= $oeuvres["prenom"] . " " . $oeuvres["nom"];
             }
