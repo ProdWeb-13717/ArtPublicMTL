@@ -87,7 +87,8 @@
             var a = document.createElement("a");
             a.title = resultat;
             if (type == "lieu" || type == "categorie") {
-                a.href = "./index.php?Public&action=afficheOeuvres" + type + "&idValue=" + resultat;
+               // type = type.charAt(0).toUpperCase() + type.slice(1);
+                a.href = "./index.php?Public&action=afficheOeuvres" + type + "&idValue=" + id; 
             }
             if (type == "artiste") {
                 a.href = "./index.php?Public&action=descriptionArtiste&id=" + id;

@@ -110,6 +110,7 @@
 				echo "<resultatRecherche>";
 				echo "<type>" . $r["type"] . "</type>";
 				echo "<resultat>" . $r["resultat"] . "</resultat>";
+				echo "<idArrondissement>" . $r["idArrondissement"] . "</idArrondissement>";
 				echo "<id>" . $r["id"] . "</id>";
 				echo "</resultatRecherche>";
 			}

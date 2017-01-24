@@ -9,8 +9,9 @@
 		///---les oeuvres ainsi que le nom de artiste lié à chaque oeuvre.---///
 		public function obtenirTousOeuvresArtistes(){
 			try{			
-				$stmt = $this->connexion->prepare("SELECT oeuvre.id, idArtiste,titre, titreVariante, categorie,urlImage, artiste.prenom, artiste.nom
-													FROM oeuvre JOIN artiste ON idArtiste = artiste.id WHERE oeuvre.valide = 1");
+				$stmt = $this->connexion->prepare("SELECT oeuvre.id, idArtiste,titre, titreVariante, categorie.nom as categorie, urlImage, artiste.prenom, artiste.nom, artiste.nomCollectif
+													FROM oeuvre JOIN artiste ON idArtiste = artiste.id 
+                                                    JOIN categorie ON oeuvre.categorie = categorie.id WHERE oeuvre.valide = 1");
 				$stmt->execute();
 				return $stmt->fetchAll();
 			}		
@@ -23,8 +24,9 @@
 		///---les oeuvres d'une categorie ainsi que le nom de artiste lié à chaque oeuvre.---///
 		public function obtenirOeuvresCategorie($uneCategorie){
 			try{	
-				$stmt = $this->connexion->prepare("SELECT oeuvre.id, titre, idArtiste, categorie,urlImage, artiste.prenom, artiste.nom  
-													FROM oeuvre JOIN artiste ON idArtiste = artiste.id WHERE categorie= :uneCategorie AND oeuvre.valide = 1");
+				$stmt = $this->connexion->prepare("SELECT oeuvre.id, titre, idArtiste, categorie,urlImage, artiste.prenom, artiste.nom, artiste.nomCollectif  
+													FROM oeuvre JOIN artiste ON idArtiste = artiste.id 
+                                                    JOIN categorie ON oeuvre.categorie = categorie.id WHERE categorie= :uneCategorie AND oeuvre.valide = 1");
 				$stmt->bindParam(":uneCategorie", $uneCategorie);
 				$stmt->execute();
 				return $stmt->fetchAll();	
@@ -37,9 +39,10 @@
 		///---les oeuvres d'un arrondissement ainsi que le nom de artiste lié à chaque oeuvre.---///
 		public function obtenirOeuvresArrondissement($unArrondissement){
 			try{			
-				$stmt = $this->connexion->prepare("SELECT oeuvre.id, idArtiste, titre, arrondissement,urlImage, artiste.prenom, artiste.nom, artiste.nomCollectif, coordonneeLatitude, coordonneeLongitude
+				$stmt = $this->connexion->prepare("SELECT oeuvre.id, idArtiste, titre, arrondissement.nom as arrondissement, arrondissement.id as idArrondissement,urlImage, artiste.prenom, artiste.nom, artiste.nomCollectif, coordonneeLatitude, coordonneeLongitude
 													FROM oeuvre JOIN artiste ON idArtiste = artiste.id
-													WHERE arrondissement= :unArrondissement AND oeuvre.valide = 1");
+                                                    JOIN arrondissement on oeuvre.arrondissement = arrondissement.id
+													WHERE arrondissement.id= :unArrondissement AND oeuvre.valide = 1");
 				$stmt->bindParam(":unArrondissement", $unArrondissement);
 				$stmt->execute();
 				return $stmt->fetchAll();
@@ -51,9 +54,9 @@
         
         public function obtenirTousOeuvresArrondissement(){
 			try{			
-				$stmt = $this->connexion->prepare("SELECT oeuvre.id, idArtiste, titre, arrondissement,urlImage, artiste.prenom, artiste.nom, artiste.nomCollectif, coordonneeLatitude, coordonneeLongitude
-													FROM oeuvre JOIN artiste ON idArtiste = artiste.id AND oeuvre.valide = 1");
-				$stmt->bindParam(":unArrondissement", $unArrondissement);
+				$stmt = $this->connexion->prepare("SELECT oeuvre.id, idArtiste, titre, arrondissement.nom as arrondissement, arrondissement.id as idArrondissement, categorie as idCategorie, urlImage, artiste.prenom, artiste.nom, artiste.nomCollectif, coordonneeLatitude, coordonneeLongitude
+													FROM oeuvre JOIN artiste ON idArtiste = artiste.id JOIN arrondissement on oeuvre.arrondissement = arrondissement.id AND oeuvre.valide = 1");
+				//$stmt->bindParam(":unArrondissement", $unArrondissement);
 				$stmt->execute();
 				return $stmt->fetchAll();
 			}		

@@ -11,11 +11,12 @@
 				$rechDans = "% ".$strRecherche."%";
 				$rechDash = "%-".$strRecherche."%";
 				$sqlStm =
-					"SELECT 'lieu' as type, nom as resultat, (0) as id FROM arrondissement WHERE nom LIKE '".$rechDebut."' or nom LIKE '". $rechDans. "' or nom LIKE '". $rechDash. "'".
+					"SELECT 'lieu' as type, nom as resultat, id FROM arrondissement WHERE nom LIKE '".$rechDebut."' or nom LIKE '". $rechDans. "' or nom LIKE '". $rechDash. "'".
 					" UNION SELECT 'oeuvre' as type, titre as resultat, id from oeuvre where (titre LIKE '".$rechDebut."' or titre LIKE '". $rechDans. "') and valide = 1".
-					" UNION SELECT 'artiste' as type, concat(prenom, ' ', nom) as resultat, id FROM artiste WHERE nom LIKE '". $rechDebut."' or nom LIKE '". $rechDans."' or prenom LIKE '". $rechDebut."' or prenom LIKE '". $rechDans."'".
-					" UNION SELECT 'artiste' as type, nomCollectif as resultat, id FROM artiste WHERE nomCollectif LIKE '". $rechDebut."' or nomCollectif LIKE '". $rechDans."'".
-					" UNION SELECT 'categorie' as type, nom as resultat, (0) as id FROM categorie WHERE nom LIKE '".$rechDebut."' or nom LIKE '". $rechDans."'";
+					" UNION SELECT 'artiste' as type, concat(prenom, ' ', nom) as resultat, id FROM artisteavecoeuvre WHERE nom LIKE '". $rechDebut."' or nom LIKE '". $rechDans."' or prenom LIKE '". $rechDebut."' or prenom LIKE '". $rechDans."'".
+					" UNION SELECT 'artiste' as type, nomCollectif as resultat, id FROM artisteavecoeuvre WHERE nomCollectif LIKE '". $rechDebut."' or nomCollectif LIKE '". $rechDans."'".
+					" UNION SELECT 'categorie' as type, nom as resultat, id FROM categorie WHERE nom LIKE '".$rechDebut."' or nom LIKE '". $rechDans."'";
+
 				//echo $sqlStm;	
 				$stmt = $this->connexion->prepare($sqlStm);
 				$stmt->execute();
@@ -60,11 +61,14 @@
 		
 		public function nomOeuvre($id){		
 			try{
-				$stmt = $this->connexion->prepare("select titre, categorieObjet, categorie, parc, materiaux, adresseCivique, urlImage, artiste.nom, artiste.prenom, artiste.nomCollectif, arrondissement.nom as nomArrondissement, coordonneeLatitude, coordonneeLongitude, idArtiste from oeuvre 
-                join artiste on oeuvre.idArtiste = artiste.id 
-				join arrondissement on oeuvre.arrondissement = arrondissement.nom WHERE oeuvre.id = :id AND oeuvre.valide = 1");
+
+				$stmt = $this->connexion->prepare("SELECT titre, categorieObjet, categorie.nom as categorie, parc, materiaux, adresseCivique, urlImage, artiste.nom, artiste.prenom, artiste.nomCollectif, arrondissement.nom as nomArrondissement, arrondissement.id as idArrondissement, coordonneeLatitude, coordonneeLongitude, idArtiste from oeuvre 
+                join artiste on oeuvre.idArtiste = artiste.id
+                join categorie on oeuvre.categorie = categorie.id
+				join arrondissement on oeuvre.arrondissement = arrondissement.id WHERE oeuvre.id = :id");
+
 				$stmt->execute(array(":id" => $id));
-				return $stmt->fetch();
+				return $stmt->fetchAll();
 			}	
 			catch(Exception $exc){
                 

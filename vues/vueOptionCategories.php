@@ -3,7 +3,7 @@
     <option value="_">Catégorie</option>
     <?php 
         foreach($data as $categorie){
-        echo"<option value='{$categorie["nom"]}'>{$categorie["nom"]}</option>";
+        echo"<option value='{$categorie["id"]}'>{$categorie["nom"]}</option>";
         }
     ?>
 </select>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <!--meta charset="utf-8"-->
+        <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/flexbox.css" />
         <link rel="stylesheet" href="css/recherche.css" />
@@ -15,6 +16,8 @@
         <script src="./js/public_Oeuvres.js"></script>
         <script src="./js/admin.js"></script>
         <script src="./js/recherche.js"></script>
+        <script src="./js/maps.js"></script>
         <!--<script src="./js/soumission.js"></script>-->
         <!--<script src="js/telechargementImage.js"></script>-->
+        <title>Art Public Montreal</title>
     </head>

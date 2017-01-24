@@ -9,8 +9,8 @@
             //initialisation de la requête
             if (xhr) {
                 //obtenir le nom du fichier à aller chercher.
+
                 xhr.open("GET", "index.php?Admins&action=importation");
-               
                 //2ème étape - spécifier la fonction de callback
                 xhr.addEventListener("readystatechange", function () {
                     //console.log("État de la requête : " + xhr.readyState);
