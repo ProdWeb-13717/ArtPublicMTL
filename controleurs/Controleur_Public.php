@@ -86,6 +86,17 @@
                             $this->afficheOeuvresLieu($params["idValue"]);
                         }
                         break;
+                        
+                    case "aPropos":
+                        
+                            $this->afficheVue("headerPasAccueil");
+                            $this->afficheVue("ouvertureAside",""); 
+                            $this->afficheVue("rechercheGauche","");   
+                            $this->afficheVue("vueBtnSoumission",""); 
+                            $this->afficheVue("fermetureAside","");
+                            $this->affichePageAPropos();
+                        
+                        break;
 					
 					case "afficheOeuvrescategorie":
                         if(isset($params["idValue"])){
@@ -207,5 +218,11 @@
 			$data=$modeleOeuvres-> obtenirTousOeuvresArrondissement();
 			$this->afficheVue("pageCarte", $data);
 		}
+        
+        public function affichePageApropos(){
+            $modeleApropos = new Modele_propos();
+            $data = $modeleApropos->obtenirTousPagePropos();
+            $this->afficheVue("vuePropos", $data);
+        }
 	}
 ?>
