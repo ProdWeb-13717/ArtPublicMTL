@@ -131,7 +131,7 @@
 		
 		
 		public function afficheListeOeuvres(){
-			$modeleOeuvres= new Modele_Oeuvres();
+			$modeleOeuvres= new Modele_oeuvres();
 			$data = $modeleOeuvres->obtenirTousOeuvresArtistes();
            	$this->afficheVue("vueOeuvres", $data);
 		}
