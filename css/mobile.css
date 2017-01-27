@@ -1,0 +1,41 @@
+/*mobile*/
+@font-face {
+    font-family: 'bang_whack_powregular';
+    src: url('font/bang_whack_pow-webfont.eot');
+    src: url('font/bang_whack_pow-webfont.eot?#iefix') format('embedded-opentype'), url('font/bang_whack_pow-webfont.woff2') format('woff2'), url('font/bang_whack_pow-webfont.woff') format('woff'), url('font/bang_whack_pow-webfont.ttf') format('truetype'), url('font/bang_whack_pow-webfont.svg#bang_whack_powregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'klillregular';
+    src: url('font/klill-light-webfont.eot');
+    src: url('font/klill-light-webfont.eot?#iefix') format('embedded-opentype'), url('font/klill-light-webfont.woff2') format('woff2'), url('font/klill-light-webfont.woff') format('woff'), url('font/klill-light-webfont.ttf') format('truetype'), url('font/klill-light-webfont.svg#klillregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'klillregular';
+    font-size: 14px;
+	background-color: #fff;
+	background-image: url("images/img5876501747a1d-Sault-saint-louis.JPG");
+}
+
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+ul {
+    list-style: none;
+}

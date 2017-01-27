@@ -23,6 +23,7 @@
 body {
     font-family: 'klillregular';
     font-size: 16px;
+	background-image: none;
 }
 
 a{
@@ -41,21 +42,38 @@ ul {
 #carroussel {}
 
 #logoSuggestionOeuvre {
-    max-height: 190px;
+    width: 190px;
     margin-top: 20%;
-    margin-left: 30px;
+    margin-left: 50px;
+	display: block;
+}
+
+.photoAccueilMobile{
+	display: none;
 }
 
 .entete {
     margin: 20px;
 }
 
+.pas_accueil .entete{
+	display: flex;
+	flex-flow : row;
+	align-content: space-between;
+}
+
+
 .photo {
     height: auto;
     width: auto;
     max-width: 300px;
     max-height: 300px;
-    padding: 30x;
+}
+
+.hoverPhoto{
+	display: flex;
+	flex-flow : row;
+	justify-content: center;
 }
 
 /**CSS PAGE ACCUEIL**/
@@ -76,27 +94,45 @@ ul {
     margin-left: -20px;
 }
 
+.pas_accueil #logo{
+	width: 80%;
+}
+
+.burger{
+	display: none;
+}
+
 .ligne_logo{
 	width:100%;
-	height: 13px;
+	height: 11px;
 	background-image: url("../images/ligne_logo.png");
 	background-repeat: repeat-x;
     position: absolute;
-    top: 80px;
+    top: 83px;
     left: 0;
     z-index: -90;
 }
 
 .pas_accueil .image_gauche {
     position: absolute;
-    top: 100px;
+    top: 105px;
     left: -13px;
+	display: block;
+}
+/*
+.lignes_menu{
+
+}*/
+
+.ligne_noire{
+	display: none;
 }
 
 .pas_accueil .image_droite {
     position: absolute;
     top: 94px;
     right: 0px;
+	display: block;
 }
 
 .menu {
@@ -106,6 +142,7 @@ ul {
 
 #menuPrincipal {
     margin-top: 25px;
+	display: block;
 }
 
 .itemMenu,
@@ -121,30 +158,39 @@ ul {
     padding: 3px;
 }
 
+.cacheElem{
+	display: none;
+}
+
+.pas_accueil .cacheElem{
+	display: none;
+}
+
 .pas_accueil .itemMenu a {
     color: black;
 }
 
 .itemMenu a:hover,
-#reseauxSociaux .icones:hover {}
+.reseauxSociauxHeader .icones:hover {}
 
-#reseauxSociaux {
+.reseauxSociauxHeader {
+	display: block;
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-#reseauxSociaux ul {
+.reseauxSociauxHeader ul {
     margin: 10px 20px;
 }
 
-#reseauxSociaux .icones {
+.reseauxSociauxHeader .icones {
     font-size: 1.1em;
     margin-right: 5px;
     padding: 3px;
 }
 
-#reseauxSociaux .icones a {
+.reseauxSociauxHeader .icones a {
     color: #fff;
 }
 
@@ -160,7 +206,7 @@ ul {
     z-index: -100;
 }
 
-.pas_accueil #reseauxSociaux .icones a {
+.pas_accueil .reseauxSociauxHeader .icones a {
     color: #000;
 }
 
@@ -169,6 +215,7 @@ ul {
 #zoneDesArtistes,
 #descriptionArtiste {
     width: 100%;
+	margin-top: 0px;
 }
 
 #zoneDesArtistes .titrePage {
@@ -178,7 +225,7 @@ ul {
 
 /*http://www.webcis.com.br/dividir-texto-colunas-css3.html*/
 #zoneDesArtistes ul {
-    -moz-column-count: 5;
+    -moz-column-count: 4;
     -moz-column-gap: 50px;
     -webkit-column-count: 4;
     -webkit-column-gap: 50px;
@@ -186,7 +233,7 @@ ul {
 
 #zoneDesArtistes ul h1 {
     font-size: 2em;
-    color: red;
+    color: #c92e32;
     margin-bottom: 15px;
     margin-top: 0px;
 }
@@ -200,6 +247,12 @@ ul {
     font-size: 1.2em;
 }
 
+#descriptionArtiste .btnRetourner{
+	width: 25px;
+	height: 15px;
+}
+
+
 .suggererOeuvre {
     float: left;
     position: absolute;
@@ -210,6 +263,10 @@ ul {
 
 #infosMonArtiste {
     margin-top: 30px;
+}
+
+#descriptionArtiste{
+	margin-left: 0px;
 }
 
 #descriptionArtiste h1,
@@ -223,9 +280,16 @@ ul {
     flex: 1 0 0;
 }
 
+.infosMonArtiste{
+	display: flex;
+	flex-flow : row-reverse;
+}
+
 #descriptionArtiste p {
     width: 50%;
     margin-left: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
 }
 
 #descriptionArtiste img {
@@ -234,7 +298,7 @@ ul {
 }
 /**FIN PAGE DE LA BIO D'UN ARTISTE**/
 /**DÉBUT PAGE À PROPOS**/
-.descriptionPagePropos {
+.pas_accueil .pageAPropos p {
     font-size: 1.2em;
     margin: 20px 0px 40px 0px;
 	line-height: 25px;
@@ -244,6 +308,9 @@ ul {
 	margin: 0px 30px;
 }
 
+.pas_accueil .pageAPropos h1{
+	font-size: 1.8em;
+}
 /**FIN PAGE À PROPOS**/
 /**DÉBUT TEMPLATE GAUCHE**/
 
@@ -300,11 +367,15 @@ ul {
     color: black;
 }
 
+.pas_accueil .sandwich .detailIcone{
+	position: static;
+}
+
 .pas_accueil #faSearch {
     color: black;
     font-size: 1em;
     float: right;
-    margin-top: 25px;
+    margin-top: 45px;
 }
 
 .pas_accueil #logoSuggestionOeuvre {
@@ -313,11 +384,27 @@ ul {
 
 .pas_accueil #resultatRecherche {
     border: none;
-    position: absolute;
-    top: 100px;
+    top: 240px;
+	right: inherit;
+	width: 320px;
+	margin-left: 20px;
+	background-color: transparent;
+	position: static;
 }
 /**FIN TEMPLATE GAUCHE**/
 /**Debut LISTEOEUVRES**/
+.collectionOeuvres{
+	display: flex;
+	flex-flow : row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 0px;
+}
+
+.uneOeuvreCollection{
+	margin-top: 10px;
+}
 
 #collectionOeuvres .titrePage {
     border-bottom: 2px solid black;
@@ -334,5 +421,26 @@ ul {
     padding: 300x;
     width: 250px;
     height: 50px;
+}
+<<<<<<< HEAD
+
+.detailDuneOeuvre{
+	margin-top: 30px;
+	display: flex;
+	margin-left: 10px;
+}
+
+.detailDuneOeuvre img{
+	
+}
+
+.infosOeuvre{
+	display: flex;
+	flex-flow : row;
+}
+/**FIN LISTEOEUVRES**/
+/**FOOTER***/
+.reseauxSocFooter{
+	display: none;
 }
 /**FIN LISTEOEUVRES**/

@@ -1,0 +1,322 @@
+/*mobile*/
+@font-face {
+    font-family: 'bang_whack_powregular';
+    src: url('font/bang_whack_pow-webfont.eot');
+    src: url('font/bang_whack_pow-webfont.eot?#iefix') format('embedded-opentype'), url('font/bang_whack_pow-webfont.woff2') format('woff2'), url('font/bang_whack_pow-webfont.woff') format('woff'), url('font/bang_whack_pow-webfont.ttf') format('truetype'), url('font/bang_whack_pow-webfont.svg#bang_whack_powregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'klillregular';
+    src: url('font/klill-light-webfont.eot');
+    src: url('font/klill-light-webfont.eot?#iefix') format('embedded-opentype'), url('font/klill-light-webfont.woff2') format('woff2'), url('font/klill-light-webfont.woff') format('woff'), url('font/klill-light-webfont.ttf') format('truetype'), url('font/klill-light-webfont.svg#klillregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'klillregular';
+    font-size: 14px;
+	background-color: #fff;
+	/*background-image: url("../images/img5876501747a1d-Sault-saint-louis.JPG");*/
+}
+
+.pas_accueil{
+	background-image: none;
+}
+
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+ul {
+    list-style: none;
+}
+/*------- HEADER -------*/
+#logo{
+	width: 85%;
+	margin-top: 9px;
+}
+
+.ligne_noire{
+	margin-left: 0px;
+	margin-top: 0px;
+	max-width: 320px;
+}
+
+.reseauxSociauxHeader{
+	display: none;
+}
+
+		/*------- RECHERCHE -------*/
+.cacheMontreForm,
+.cacheMontreRecherchePar,
+.resultatRecherche{
+	display: none;
+}
+
+#faSearch{
+	color: #000;
+    font-size: 1.7em;
+}
+
+.detailIcone{
+	position: absolute;
+	top: 20px;
+	right: 50px;
+}
+
+#inputRecherche{
+	width:150px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #000;
+		margin:10px;
+}
+
+#textRecherchez,
+#inputRecherche {
+    color: #000;
+    font-family: 'bang_whack_powregular';
+    letter-spacing: 3px;
+}
+
+.voirFormRecherche{
+	display: block;
+	position: absolute;
+	top: 48px;
+	right: 50px;
+	background-color: #fff;
+	border-bottom-right-radius: 10px;
+}
+
+.resultatRecherche{
+	background-color: #fff;
+	border-bottom-right-radius: 10px;
+	width: 250px;
+	font-size: .9em;
+}
+
+.resultatRecherche li:last-child{
+	margin-bottom: 5px;
+}
+
+		/*------- MENU BURGER -------*/
+.burger {
+	display: block;
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	width: 40px;
+	height: 40px;
+}
+
+.burger span {
+	display: block;
+	position: absolute;
+	width: 65%;
+	left: 7%;
+	background-color: #000;
+}
+
+.burger span:nth-child(1) {
+	top: 10%;
+	height: 8%;
+}
+
+.burger span:nth-child(2) {
+	top: 30%;
+	height: 8%;
+}
+
+.burger span:nth-child(3) {
+	top: 50%;
+	height: 8%;
+}
+
+.menuPrincipal{
+	display: none;
+}
+
+.menuBurger,
+.iconeFormRecherche{
+	opacity: 0.5;
+}
+
+.voirMenu{
+	background-color: #fff;
+	border-bottom-left-radius: 10px;
+	padding:5px;
+	width: 120px;
+	display: block;
+	position: absolute;
+	top: 50px;
+	right: 20px;
+	text-align: right;
+	font-family: 'bang_whack_powregular';
+	font-size: 1.1em;
+	z-index: 10;
+}
+
+.voirMenu .itemMenu{
+	margin-top: 5px;
+}
+
+.photoAccueilMobile{
+	height: 400px;
+	background-image:  url("../images/img5876501747a1d-Sault-saint-louis.JPG");
+}
+
+		/*------- HEADER PAS ACCUEIL -------*/
+.pas_accueil .entete{
+	display: block;
+}
+
+.pas_accueil .image_droite{
+	display: none;
+}
+
+.pas_accueil .image_gauche{
+	display: none;
+}
+
+/*------- FOOTER -------*/
+footer{
+	padding: 23px 0;
+}
+
+.reseauxSocFooter{
+	width: 90px;
+	margin: 0px auto;
+}
+
+.icones{
+	display: inline;
+	font-size: 2em;
+}
+
+.reseauxSocFooter a{
+	color: #000;
+}
+
+#logoSuggestionOeuvre{
+	display: none;
+}
+
+/*------- PAGE DES OEUVRES -------*/
+
+.photo{
+	width: 60%;
+	padding: 5px 0;
+}
+
+.hoverPhoto{
+	display: none;
+}
+
+.collectionOeuvres{
+	display: block;
+	margin-top: 50px;
+}
+
+.uneOeuvreCollection{
+}
+
+.detailDuneOeuvre{
+	margin-top: 10px;
+	display: block;
+	margin-left: 30px;
+}
+
+
+/*------- PAGE DES ARTISTES -------*/
+/*http://www.webcis.com.br/dividir-texto-colunas-css3.html*/
+#zoneDesArtistes{
+	margin-left: 20px;
+	margin-top: 30px;
+	font-size: .9em;
+}
+
+#zoneDesArtistes ul {
+    -moz-column-count: 2;
+    -moz-column-gap: 0px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0px;
+}
+
+#descriptionArtiste{
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+#descriptionArtiste h1 {
+    font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
+#descriptionArtiste img {
+    width: 40%;
+    height: 40%;
+	margin-top: 10px;
+}
+
+.infosMonArtiste{
+	display: flex;
+	flex-flow : column;
+}
+
+.infosMonArtiste p{
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+#descriptionArtiste .btnRetournerListeArtistes{
+	margin-left: 0px;
+}
+
+.btnRetournerListeArtistes{
+	font-size:.9em;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+.btnRetourner, 
+.btnRetournerListeArtistes{
+	font-size:.9em;
+}
+
+#descriptionArtiste .btnRetourner{
+	width: 5%;
+	height: 5%;
+}
+
+/*------- PAGE À PROPOS -------*/
+.pas_accueil .pageAPropos h1{
+	font-size: 1.2em;
+	margin: 5px 0;
+}
+
+.pas_accueil .pageAPropos p{
+	font-size: .9em;
+	margin: 5px 0;
+}
+
+.pageAPropos{
+	margin: 30px 10px 0px 10px;
+}
+
+/*------- SOUMISSION -------*/
+#idMsgRetourSoumission {
+	margin-top: 0px;
+}

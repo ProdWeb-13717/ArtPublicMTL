@@ -38,7 +38,6 @@
 							header("Location:index.php?Admins&action=login");
 						}else{
 							$data = $modeleOeuvres->listeDesOeuvres();	
-							$this->afficheVue("headerAdmin","");
 							$this->afficheVue("adminListeDesOeuvres", $data);
 							break;									
 						}
@@ -58,8 +57,7 @@
 						if(!isset($_SESSION["authentifie"])){ 
 							header("Location:./index.php?Admins&action=login");
 						}else{
-							$this->afficheVue("headerAdmin","");
-							//$this->afficheVue("vueProposAdmin", $data);
+							$this->afficheVue("vueProposAdmin", $data);
 							$this->pageProposAdmins();
 						}
 						break;
@@ -105,7 +103,7 @@
 						}else{
 						  $modeleCaroussel= new Modele_caroussel();
 						  $data = $modeleCaroussel->imagesCaroussel();
-						  $this->afficheVue("headerAdmin","");						  
+						  $this->afficheVue("menuAdminGauche","");						  
 						  $this->afficheVue("caroussel",$data);	
 						  $this->afficheVue("ajoutCaroussel","");
 						  $data = $modeleCaroussel->imagesOeuvresPourCaroussel();

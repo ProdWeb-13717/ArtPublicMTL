@@ -1,4 +1,4 @@
-<div class="flex row JCflex-end ml50  ACcenter AIcenter tousEgal avecWrap JCspace-around" id="collectionOeuvres">
+<div class="collectionOeuvres" id="collectionOeuvres">
     <?php
     if($data){
                 $cont=0;
@@ -8,7 +8,7 @@
                    // if (strpos($oeuvres["titre"], 'Non titré') === true) {
                     if($cont<15)
                     {
-                        echo"<div class ='flex column ACcenter AIcenter avecWrap id='{$oeuvres["id"]}'>
+                        echo"<div class ='uneOeuvreCollection flex column ACcenter AIcenter avecWrap' id='{$oeuvres["id"]}'>
 
                             <a href='index.php?Public&action=details&id={$oeuvres["id"]}'>";
 
@@ -19,9 +19,10 @@
                           echo "<img class='photo' src='images/{$oeuvres["urlImage"]}'alt='{$oeuvres["titre"]}'/>
 
                             </a>
-                                <div class='hoverPhoto flex row JCcenter '>
+            <div class='hoverPhoto flex row JCcenter '>
                                     <span class='titreOeuvres '><a href='index.php?Public&action=details&id={$oeuvres["id"]}'> {$oeuvres["titre"]}</a></span>
                                     <span class='nomArtistes '><a href='index.php?Public&action=descriptionArtiste&id={$oeuvres["idArtiste"]}'>, {$oeuvres["prenom"]} {$oeuvres["nom"]} {$oeuvres["nomCollectif"]}</a></span>
+
                                 </div>
                         </div>";
                         $cont++;

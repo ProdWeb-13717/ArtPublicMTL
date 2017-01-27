@@ -18,13 +18,18 @@
     font-family: 'bang_whack_powregular';
 }
 
+.cacheMontreForm,
+.cacheMontreRecherchePar{
+	display: block;
+}
+
 #inputRecherche:focus {
     outline: none;
 }
 
-#faSearch {
-    color: white;
-    font-size: 1.7em;
+.detailIcone{
+	top: inherit;
+	right: 90px;
 }
 
 #textRecherchez {
@@ -156,11 +161,24 @@
 }
 
 #resultatRecherche {
-    float: right;
-    border: 1px solid black;
-    padding-left: 10px;
+	display: block;
+	width: 400px;
+	position: absolute;
+	right: 120px;
+	bottom: 180px;
+	padding-left: 10px;
     background-color: white;
-    margin: 0px 10px 13px 0px;
+	border-radius: 0px;
+}
+
+#faSearch{
+	color: #fff;
+}
+
+.resultatRecherche{
+	background-color: #fff;
+	border-bottom-left-radius: 0px;
+	padding-bottom: 0px;
 }
 
 #titreListe {

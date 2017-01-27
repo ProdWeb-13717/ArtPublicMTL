@@ -20,11 +20,24 @@ $(document).ready(function(){
 		var backgroundPath = "";	
 		var usedImages = {};
 		var usedImagesCount = 0;
-		$("body").css("background-image", "url(" + backgroundPath + displayImage() + ")");
-
+		//(min-width: 600px)
+		//Commencer la page d'accueil avec le fond de page blac pour les mobiles et donner le carrousel pour les écrans plus grands que 600px
+		if(window.screen.width > 600){
+			$("body").css("background-image", "url(" + backgroundPath + displayImage() + ")");
+		} else{
+			$("body").css("background-image", "none");
+		}
 		// changement de toile de fond a tous les 6 secondes.
 		var timer = setInterval(function() {
-		   $("body").css("background-image", "url(" + backgroundPath + displayImage() + ")");		   
+			//Ne pas continuer le carrousel pour les écrans plus petit que 600px
+			if(window.screen.width > 600)
+			{
+				$("body").css("background-image", "url(" + backgroundPath + displayImage() + ")");
+			}
+			else
+			{
+				$("body").css("background-image", "none");
+			}
 	   }, 6000);
 	   
 	   function displayImage(){
@@ -58,19 +71,26 @@ $(document).ready(function(){
 		<!--Debut Section ENTÊTE-->
 		<header class ="entete flex row JCflex-start">
 			<a id="lienLogo" href="index.php">
-				<img id="logo" src="images/logo+blanc3.png" alt="logo" >
+				<img id="logo" src="images/logo+blanc3.png" alt="logo" alt="Logo ArtPublicMTL">
 				<div class="ligne_logo"></div>
+				<div class="cacheElem"><img class="ligne_noire" src="images/lignes_haut_gaucheMOB.png" alt="lignes_haut_gauche"></div>
 			</a>
 			<div class="menu">
-				<nav id="menuPrincipal">
+				<div id="burger" class="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<nav id="menuPrincipal" class="menuPrincipal">
 					<ul>
 						<li class="itemMenu"><a href="index.php?Public&action=listeOeuvres">OEUVRES</a></li>
 						<li class="itemMenu"><a href="index.php?Public&action=listeArtistes">ARTISTES</a></li>
 						<li class="itemMenu"><a href="index.php?Public&action=carte">CARTE</a></li>
 						<li class="itemMenu"><a href="index.php?Public&action=aPropos">À PROPOS</a></li>
+						<li class="itemMenu cacheElem"><a href="index.php?Public&action=soumission">SOUMISSION</a></li>
 					</ul>
 				</nav>
-				<nav id="reseauxSociaux">
+				<nav id="reseauxSociaux" class="reseauxSociauxHeader">
 					<ul>
 						<li class="icones" id="reseauFacebook">
 							<a href="https://www.facebook.com/">

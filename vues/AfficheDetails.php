@@ -1,4 +1,4 @@
-<article class="flex tousEgal column ml50 pageUneOeuvre">
+<article class="flex column mt30 pageUneOeuvre">
     <script>
         <?php
                 echo "var donnees_carte =". json_encode($data);
@@ -9,8 +9,8 @@
         echo "<h1 class='ligneBas'>" . $data[0]["titre"] . "</h1>";
         
     ?>
-        <section class="flex tousEgal">
-            <section class="flex row">
+        <section class="detailDuneOeuvre">
+            <section class="infosOeuvre">
                 <section>
                     <?php
 
@@ -80,4 +80,8 @@
               
             </section>
         </section>
+		<section class="btnRetournerListeArtistes">
+			<a href="index.php?Public&action=listeOeuvres"><img src="./images/triangle-select.png" alt="Retourner à la liste des oeuvres" class="btnRetourner">
+			Retourner à la liste des oeuvres</a>
+		</section>
 </article>

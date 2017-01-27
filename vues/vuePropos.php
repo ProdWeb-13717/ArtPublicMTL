@@ -1,5 +1,4 @@
 ﻿<!--commencer directement avec la div contenu-->
-<div class="contenu">
 	<section class="pageAPropos">
         <h1 class="titrePagePropos"><?php echo $data["sommesT"]; ?></h1>
         <p class="descriptionPagePropos"><?php echo $data["sommesD"]; ?></p>

@@ -1,20 +1,25 @@
-<body>
-
+<body class="pas_accueil">
     <!--debut du conteneur GLOBAL-->
     <div id="global">
         <!--Debut Section ENTÊTE-->
-        <header class="entete flex row JCflex-start pas_accueil">
+        <header class="entete pas_accueil">
             <a id="lienLogo" href="index.php"> <img id="logo" src="images/logo+blanc3.png" alt="logo"> </a>
             <div class="menu">
-                <nav id="menuPrincipal">
+				<div id="burger" class="burger" class="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+                <nav id="menuPrincipal"  class="menuPrincipal">
                     <ul>
                         <li class="itemMenu"><a href="index.php?Public&action=listeOeuvres">OEUVRES</a></li>
                         <li class="itemMenu"><a href="index.php?Public&action=listeArtistes">ARTISTES</a></li>
                         <li class="itemMenu"><a href="index.php?Public&action=carte">CARTE</a></li>
                         <li class="itemMenu"><a href="index.php?Public&action=aPropos">À PROPOS</a></li>
+						<li class="itemMenu cacheElem"><a href="index.php?Public&action=soumission">SOUMISSION</a></li>
                     </ul>
                 </nav>
-                <nav id="reseauxSociaux">
+                <nav id="reseauxSociaux" class="reseauxSociauxHeader">
                     <ul>
                         <li class="icones" id="reseauFacebook">
                             <a href="https://www.facebook.com/"> <i class="fa fa-facebook-square" aria-hidden="true"></i> </a>
@@ -28,7 +33,10 @@
                     </ul>
                 </nav>
             </div>
-            <section class="lignes_menu flex row JCspace-between"> <img class="image_gauche" src="images/lignes haut gauche.png" alt="lignes haut gauche"> <img class="image_droite" src="images/lignes haut droite.png" alt="lignes haut droite"> </section>
+            <section class="lignes_menu flex row JCspace-between"> 
+				<img class="image_gauche" src="images/lignes_haut_gauche.png" alt="lignes_haut_gauche">
+				<img class="ligne_noire" src="images/lignes_haut_gaucheMOB.png" alt="lignes_haut_gauche">
+				<img class="image_droite" src="images/lignes_haut_droite.png" alt="lignes_haut_droite">
+			</section>
         </header>
         <!--fin Section ENTÊTE-->
-
