@@ -157,15 +157,15 @@
 }
 
 #formRecherche {
-    margin-left: 80%;
+    margin-left: 65%;
 }
 
 #resultatRecherche {
 	display: block;
 	width: 400px;
 	position: absolute;
-	right: 120px;
-	bottom: 180px;
+	right: 70px;
+	bottom: 740px;
 	padding-left: 10px;
     background-color: white;
 	border-radius: 0px;
@@ -173,6 +173,8 @@
 
 #faSearch{
 	color: #fff;
+	font-size: 1.7em;
+	margin-right: -50px;
 }
 
 .resultatRecherche{
@@ -182,14 +184,13 @@
 }
 
 #titreListe {
-    font-size: 15px;
+    font-size: 25px;
     font-family: 'Share Tech Mono', monospace;
     margin: 5px 0px;
 }
 
 #resultatRecherche ul {
     list-style: none;
-    margin-top: -10px;
     max-height: 70px;
     display: block;
     overflow: auto;
@@ -197,7 +198,7 @@
 }
 
 #resultatRecherche li {
-    font-size: 10px;
+    font-size: 15px;
     margin-top: 5px;
     margin-right: 10px;
 }
@@ -205,4 +206,8 @@
 #resultatRecherche a {
     color: black;
     text-decoration: none;
+}
+
+.pas_accueil #faSearch{
+	margin-right: 0px;
 }

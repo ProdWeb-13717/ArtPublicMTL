@@ -41,8 +41,8 @@
 			// ouverture des divisions
 			if ($oeuvres["section"] != $section) {
 				$section = $oeuvres["section"];
-				echo "<div id='". $section . "'>";
-				echo "<h1>".$section."</h1>";
+				echo "<div id='". $section . "'  class='bordureDivContenu'>";
+				echo "<h1 class='titreModifAPropos'>".$section."</h1>";
 				echo "<ul>";
 			}	
 			// creation du lien dans l'oeuvre

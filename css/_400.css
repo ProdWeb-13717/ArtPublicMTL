@@ -1,0 +1,111 @@
+/*pour l'écran plus grand que 400px*/
+.pas_accueil{
+	margin-bottom: 20px;
+}
+
+/*------- HEADER -------*/
+#logo{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.ligne_noire{
+	margin-top: -25px;
+	max-width: 420px;
+}
+
+		/*------- MENU BURGER -------*/
+.burger {
+	right: 10px;
+	width: 60px;
+	height: 60px;
+}
+
+.voirMenu{
+	top: 60px;
+	font-size: 1.3em;
+	width: 130px;
+}
+
+		/*------- RECHERCHE -------*/
+.resultatRecherche{
+	width: 330px;
+	margin-top: 10px;
+}
+
+#faSearch{
+    font-size: 2.5em;
+	margin-right: 25px;
+	margin-top: 1px;
+}
+
+.voirFormRecherche{
+	top: 65px;
+	right: 60px;
+}
+
+#inputRecherche{
+	width: 250px;
+}
+
+#textRecherchez,
+#inputRecherche {
+	font-size: 1.1em;
+}
+
+/*------- PAGE DES OEUVRES -------*/
+.pageUneOeuvre h1{
+	font-size: 2em;
+}
+
+.texteInfosOeuvres{
+	font-size: 1.2em;
+}
+
+ #map {
+    height: 300px;
+    width: 380px
+}
+
+.infosOeuvre img{
+	width: 40%;
+}
+
+.btnRetourner, 
+.btnRetournerListeArtistes{
+	font-size:1.2em;
+}
+
+/*------- PAGE DES ARTISTES -------*/
+#zoneDesArtistes{
+	margin-left: 32px;
+}
+
+#descriptionArtiste h1{
+	margin-bottom: 0px;
+}
+
+#descriptionArtiste img {
+    width: 40%;
+    height: 40%;
+}
+
+.infosMonArtiste p{
+	font-size: 1.2em;
+	margin-top: 20px;
+}
+
+#descriptionArtiste .btnRetournerListeArtistes{
+	margin-left: 0px;
+}
+
+/*------- CARTE -------*/
+.touteLaCarte{
+	margin-right: 20px;
+}
+
+/*------- PAGE À PROPOS -------*/
+.pas_accueil .pageAPropos h1{
+	font-size: 1.2em;
+	margin: 10px;
+}

@@ -10,7 +10,7 @@
                     {
                         echo"<div class ='uneOeuvreCollection flex column ACcenter AIcenter avecWrap' id='{$oeuvres["id"]}'>
 
-                            <a href='./index.php?Public&action=details&id={$oeuvres["id"]}'>";
+                            <a href='index.php?Public&action=details&id={$oeuvres["id"]}'>";
 
                             if($oeuvres["urlImage"]=="")
                             {

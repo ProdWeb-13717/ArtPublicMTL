@@ -5,10 +5,7 @@
             ?>
     </script>
     <style>
-        #map {
-            height: 700px;
-            width: 1200px;
-        }
+        
     </style>
     <div id="map"></div>
     <script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC4QkcRKk6J15A3d0lLu8SZljq6opZkBMI'>

@@ -88,18 +88,17 @@ a {
 }
 
 .menu {
-	width: 800px;
-	padding: 10px;
-	margin: 10px 280px;
+	margin: 10px 315px;
 }
 
 .menuPrincipal{
 	padding: 0px 5px;
+	margin-top: 100px;
 }
 
 .btnMenu{
 	display: table-cell;
-	margin-left: 30px;
+	margin-left: 10px;
 	vertical-align: bottom;
 	width: 200px;
 	height: 180px;
@@ -107,6 +106,10 @@ a {
 	border-radius: 10px;
 	padding: 10px;
 	text-align: center;
+}
+
+.btnMenu:hover{
+	border: 3px solid #000;
 }
 /*FIN PAGE D'ACCUEIL */
 /*DEBUT D'AUTRES PAGES */
@@ -135,6 +138,7 @@ a {
 
 #imageCaroussel{
 	margin: 20px;
+	margin-left: 70px;
 	padding: 10px;
 	width: 550px;
 	border: 1px solid;
@@ -144,8 +148,7 @@ a {
 	display: flex;
 	flex-wrap: wrap;
 	width: 90%;
-	margin-left: 5%;
-	margin-right: 5%;
+	margin: 0 5%;
 	border-bottom: 3px solid;
 	padding-bottom: 50px;
 }
@@ -171,4 +174,50 @@ a {
 #titreListeImagesOeuvres{
 	font-family: 'bang_whack_powregular';
 	font-size: 23px;
+}
+
+.bordureDivContenu{
+	margin: 10px 20%;
+	font-size: 20px;
+	font-family: 'klillregular';
+	border: 1px solid grey;
+	padding: 15px;
+	padding-top: 0px;
+}
+
+label{
+	margin-bottom: 10px;
+}
+
+.titreModifAPropos{
+	font-family: 'bang_whack_powregular';
+	font-size: 30px;
+	margin-left: 30px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#btnModifPropos,
+#importer{
+	width: 200px;
+	height: 50px;
+	font-size: 1.2em;
+	border-radius: 10px;
+	font-family: 'bang_whack_powregular';
+	margin-top: 20px;
+	margin-left: 359px;
+}
+
+#importer{
+	width: auto;
+	padding: 5px;
+	margin-left: 640px;
+}
+
+.repnseBD{
+	font-family: 'bang_whack_powregular';
+    font-size: 1.5em;
+	text-align: center;
+	color: #c92e32;
+	margint-top: 20px;
 }
