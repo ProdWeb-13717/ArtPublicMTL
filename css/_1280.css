@@ -1,0 +1,74 @@
+/*pour l'écran plus grand que 1280px*/
+/*------- RECHERCHE -------*/
+#formRecherche {
+    margin-left: 75%;
+}
+
+#faSearch{
+	margin-right: 0px;
+}
+
+#resultatRecherche {
+	right: 120px;
+	bottom: 390px;
+}
+
+.pas_accueil #formRecherche {
+    margin-left: 40px;
+}
+/*------- MENU -------*/
+.ligne_logo{
+    top: 72px;
+	height: 13px;
+}
+
+.itemMenu a,
+.pas_accueil .itemMenu a  {
+    font-size: 1.8em;
+}
+
+/*------- PAGE DES OEUVRES -------*/ 
+.photo {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.pas_accueil .image_gauche {
+	width: 45%;
+    top: 100px;
+}
+
+.pas_accueil .image_droite {
+    top: 67px;
+}
+/*------- PAGE DES ARTISTES -------*/
+/*http://www.webcis.com.br/dividir-texto-colunas-css3.html*/
+#zoneDesArtistes ul {
+    -moz-column-count: 4;
+    -moz-column-gap: 50px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 50px;
+}
+
+#descriptionArtiste img {
+    width: 20%;
+    height: 20%;
+}
+
+#descriptionArtiste .btnRetourner,
+.detailDuneOeuvre .btnRetourner{
+	width: 20px;
+	height: 10px;
+}
+
+
+/*------- CARTE -------*/
+.touteLaCarte #map{
+    height: 700px;
+    width: 910px;
+ 
+}
+
+#map {
+    width: 890px
+}

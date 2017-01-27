@@ -9,14 +9,26 @@
 		
 		<!-- CSS pour mobile
 				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link rel="stylesheet" type="text/css" href="css/_base.css">
-		<!-- CSS pour l'écran de min-width 480px
-				–––––––––––––––––––––––––––––––––––––––––––––––––– 
-		<link rel="stylesheet" media="screen and (min-width: 480px)" href="css/_480.css" type="text/css" />-->
-		<!-- CSS pour l'écran de min-width 600px
+		<link rel="stylesheet" type="text/css" href="css/mobile.css">
+		<!-- CSS pour l'écran plus grand que 400px
 				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <link rel="stylesheet" media="screen and (min-width: 600px)" href="css/main.css" />
-        <link rel="stylesheet" media="screen and (min-width: 600px)" href="css/recherche.css" />
+		<link rel="stylesheet" media="screen and (min-width: 400px)" href="css/_400.css" type="text/css" />
+		<!-- CSS pour l'écran plus grand que 600px
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" media="screen and (min-width: 600px)" href="css/_600.css" type="text/css" />
+		<!-- CSS pour l'écran plus grand que 800px
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" media="screen and (min-width: 800px)" href="css/main.css" />
+        <link rel="stylesheet" media="screen and (min-width: 800px)" href="css/recherche.css" />
+		<!-- CSS pour l'écran plus grand que 1100px
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" media="screen and (min-width: 1024px)" href="css/_1024.css" type="text/css" />
+		<!-- CSS pour l'écran de min-width 1280px
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" media="screen and (min-width: 1280px)" href="css/_1280.css" type="text/css" />
+		<!-- CSS pour l'écran de min-width 1600px
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/_1600.css" type="text/css" />
 		
 
         <link rel="stylesheet" href="css/flexbox.css" />

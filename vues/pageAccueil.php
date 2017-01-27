@@ -1,5 +1,5 @@
 <style type="text/css">
-   @import url("css/pageAccueil.css") (min-width: 600px);
+   @import url("css/pageAccueil.css") (min-width: 800px);
 </style>
 <div class="contenu">
     <!-- img à changer pour le carroussel-->

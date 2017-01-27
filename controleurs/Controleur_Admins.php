@@ -37,7 +37,8 @@
 						if(!isset($_SESSION["authentifie"])){ 
 							header("Location:index.php?Admins&action=login");
 						}else{
-							$data = $modeleOeuvres->listeDesOeuvres();	
+							$data = $modeleOeuvres->listeDesOeuvres();
+							$this->afficheVue("headerAdmin","");							
 							$this->afficheVue("adminListeDesOeuvres", $data);
 							break;									
 						}
@@ -57,7 +58,8 @@
 						if(!isset($_SESSION["authentifie"])){ 
 							header("Location:./index.php?Admins&action=login");
 						}else{
-							$this->afficheVue("vueProposAdmin", $data);
+							$this->afficheVue("headerAdmin","");
+							//$this->afficheVue("vueProposAdmin", $data);
 							$this->pageProposAdmins();
 						}
 						break;
@@ -69,18 +71,15 @@
 							if(!empty($sommesT) && !empty($sommesD) && !empty($missionT) && !empty($missionD) && !empty($joindreT) && !empty($joindreD) && !empty($partenaireT) && !empty($partenaireD)){
 								$valide = $modelePropos->insererPagePropos($sommesT, $sommesD, $missionT, $missionD, $joindreT, $joindreD, $partenaireT, $partenaireD);
 								if($valide){
-									//$this->viderFormPropos();
 									$this->afficheVue("headerAdmin","");
-									echo "Insérer dans la bd";
-									//$this->afficheVue("vueProposAdmin", $valide);
+									echo "<p class='repnseBD'>Insérer dans la base de données</p>";
 									$this->pageProposAdmins();
 								} else{
 									echo "ERROR";
 								}		
 							} else{
 								$this->afficheVue("headerAdmin","");
-								echo "Remplir tous les champs";
-								//$this->afficheVue("vueProposAdmin");
+								echo "<p class='repnseBD'>Remplir tous les champs</p>";
 								$this->pageProposAdmins();
 							}
 						}else{
@@ -101,13 +100,13 @@
 						if(!isset($_SESSION["authentifie"])){ 
 							header("Location:index.php?Admins&action=login");
 						}else{
-						  $modeleCaroussel= new Modele_caroussel();
-						  $data = $modeleCaroussel->imagesCaroussel();
-						  $this->afficheVue("menuAdminGauche","");						  
-						  $this->afficheVue("caroussel",$data);	
-						  $this->afficheVue("ajoutCaroussel","");
-						  $data = $modeleCaroussel->imagesOeuvresPourCaroussel();
-						  $this->afficheVue("listeImagesOeuvres",$data);											  
+							$modeleCaroussel= new Modele_caroussel();
+							$data = $modeleCaroussel->imagesCaroussel();	
+							$this->afficheVue("headerAdmin","");						  
+							$this->afficheVue("caroussel",$data);	
+							$this->afficheVue("ajoutCaroussel","");
+							$data = $modeleCaroussel->imagesOeuvresPourCaroussel();
+							$this->afficheVue("listeImagesOeuvres",$data);											  
 						  
 						}
 						break;			

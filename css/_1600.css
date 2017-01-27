@@ -1,0 +1,58 @@
+/*pour l'écran plus grand que 1600px*/
+
+.ligne_logo{
+    top: 89px;
+	height: 13px;
+}
+
+#formRecherche {
+    margin-left: 79%;
+}
+
+/*------- CARTE -------*/
+.touteLaCarte #map{
+    width: 1190px;
+ 
+}
+
+#map {
+    width: 1130px
+}
+
+#descriptionArtiste h1,
+.titrePagePropos {
+    font-size: 3em;
+}
+
+#descriptionArtiste p {
+    font-size: 2em;
+}
+
+.btnRetourner, 
+.btnRetournerListeArtistes,
+.texteInfosOeuvres,
+.hoverPhoto,
+#zoneDesArtistes ul li,
+.pas_accueil .pageAPropos p{
+	font-size:2em;
+}
+
+.itemMenu a,
+.pas_accueil .itemMenu a,
+.pageUneOeuvre h1,
+#zoneDesArtistes .titrePage,
+#zoneDesArtistes ul h1,
+.pas_accueil .pageAPropos h1 {
+    font-size: 2.5em;
+}
+
+/*http://www.webcis.com.br/dividir-texto-colunas-css3.html*/
+#zoneDesArtistes ul {
+    -moz-column-count: 3;
+    -moz-column-gap: 50px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 50px;
+}
+.pas_accueil .pageAPropos p{
+	line-height: 40px;
+}

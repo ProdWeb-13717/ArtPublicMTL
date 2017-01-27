@@ -1,4 +1,4 @@
-<article class="flex column mt30 pageUneOeuvre">
+<article class="flex column pageUneOeuvre">
     <script>
         <?php
                 echo "var donnees_carte =". json_encode($data);
@@ -26,7 +26,7 @@
             }
         ?>
                 </section>
-                <ul>
+                <ul class="texteInfosOeuvres">
                     <?php
 
             if(($data[0]["prenom"]&&$data[0]["nom"]!="")&&($data[0]["prenom"]!= null && $data[0]["nom"]!= null )){
@@ -54,33 +54,28 @@
             }
 
             if($data[0]["adresseCivique"]!=""){
-                echo "<li><span>Adresse :". $data[0]["adresseCivique"]. "</span></li>";
+                echo "<li><span>Adresse: ". $data[0]["adresseCivique"]. "</span></li>";
             }
 
             if($data[0]["nomArrondissement"]!=""){
-                echo "<li><span>Arrondissement :<a href='./index.php?Public&action=afficheOeuvreslieu&idValue=". $data[0]["idArrondissement"]. "'>". $data[0]["nomArrondissement"]. "</a></span></li>";
+                echo "<li><span>Arrondissement: <a href='./index.php?Public&action=afficheOeuvreslieu&idValue=". $data[0]["idArrondissement"]. "'>". $data[0]["nomArrondissement"]. "</a></span></li>";
 
             }	
             ?>
                 </ul>
             </section>
-            <section class="flex tousEgal">
+            <section class="map flex">
                 
-                    <style>
-                        #map {
-                            height: 600px;
-                            width: 800px
-                        }
-                    </style>
+                    
                     <div id="map"></div>
                     
                     <script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC4QkcRKk6J15A3d0lLu8SZljq6opZkBMI'>
                     </script>
               
             </section>
+			<section class="btnRetournerListeArtistes">
+				<a href="index.php?Public&action=listeOeuvres"><img src="./images/triangle-select.png" alt="Retourner à la liste des oeuvres" class="btnRetourner">
+				Retourner à la liste des oeuvres</a>
+			</section>
         </section>
-		<section class="btnRetournerListeArtistes">
-			<a href="index.php?Public&action=listeOeuvres"><img src="./images/triangle-select.png" alt="Retourner à la liste des oeuvres" class="btnRetourner">
-			Retourner à la liste des oeuvres</a>
-		</section>
 </article>
