@@ -16,7 +16,7 @@
 
             if($data[0]["urlImage"]!=""){
                 
-        ?> <a href="images/<?php echo $data[0]["urlImage"]?>.jpg"><img class="photo" src=" ./images/<?php echo $data[0]["urlImage"]?>.jpg" alt = " <?php echo $data[0]["titre"] ?>"/></a>
+        ?> <a href="images/<?php echo $data[0]["urlImage"]?>.jpg"><img class="photo" src=" ./images/<?php echo $data[0]["urlImage"]?>" alt = " <?php echo $data[0]["titre"] ?>"/></a>
 
                         <?php
             }

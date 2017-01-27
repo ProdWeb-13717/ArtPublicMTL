@@ -5,7 +5,9 @@
 					$imagesOeuvre["urlImage"] = "no-image-available.jpg";
 				}
 ?>		
-		<img src="images/<?php echo $imagesOeuvre["urlImage"]; ?>" class="photosOeuvreUnArtiste">
+	<a href="index.php?Public&action=details&id=<?php echo $imagesOeuvre['id']; var_dump($imagesOeuvre); ?>">
+			<img src="images/<?php echo $imagesOeuvre["urlImage"]; ?>" class="photosOeuvreUnArtiste">
+		</a>
 		<?php		
 			}
 		?>
