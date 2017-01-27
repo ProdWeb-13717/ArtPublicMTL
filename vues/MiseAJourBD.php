@@ -1,4 +1,5 @@
 <script>
+    // relie le bouton « mise-à-jour de la base de donnée» au controlleur adminAjax ou se trouve le code permettant la mise à jour.
     window.addEventListener("load", function () {
         //lorsque je clique sur btnAjoutFilm
         var btnImportation = document.getElementById("importer");

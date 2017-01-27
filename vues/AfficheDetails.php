@@ -16,7 +16,7 @@
 
             if($data[0]["urlImage"]!=""){
                 
-        ?> <a href="images/<?php echo $data[0]["urlImage"]?>"><img class="photo" src=" ./images/<?php echo $data[0]["urlImage"]?>" alt = " <?php echo $data[0]["titre"] ?>"/></a>
+        ?> <a href="images/<?php echo $data[0]["urlImage"]?>"><img class="photo" src=" images/<?php echo $data[0]["urlImage"]?>" alt = " <?php echo $data[0]["titre"] ?>"/></a>
 
 
                         <?php
@@ -29,7 +29,7 @@
                 </section>
                 <ul>
                     <?php
-
+                // si la ligne existe elle apparaitra avec les données associées. Si elle n'existe pas, qu'il n'y a pas de données associées, elle n'apparaitra pas(ex pas d'adresse il n'y aura pas de adress :      )
             if(($data[0]["prenom"]&&$data[0]["nom"]!="")&&($data[0]["prenom"]!= null && $data[0]["nom"]!= null )){
                 echo "<li><span>Artiste: <a href='./index.php?Public&action=descriptionArtiste&id=". $data[0]["idArtiste"] . "'>". $data[0]["prenom"]." ".$data[0]["nom"]. "</a></span></li>";
 

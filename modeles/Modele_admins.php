@@ -33,7 +33,8 @@
                                      )
 
 		{		
-			
+			// j'ai trouvé la sous-requête «ON DUPLICATE KEY UPDATE » sur le site sql.sh/cours/insert-into/on-duplicate-key, avec l'aide de Jonhatan. Je l'utilise dans l'importation des oeuvres et des artistes.
+
             try
 		      {
 				$stmt = $this->connexion->prepare("INSERT INTO oeuvre 
@@ -78,7 +79,7 @@
                 :urlImage, 
                 :idArtiste,
                 :valide)
-                ON DUPLICATE KEY UPDATE
+                ON DUPLICATE KEY UPDATE 
                 noInterne = :noInterne, 
                 titre = :titre, 
                 titreVariante = :titreVariante, 
