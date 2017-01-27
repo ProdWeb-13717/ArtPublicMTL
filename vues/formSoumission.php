@@ -30,7 +30,7 @@
                 if (artiste.value != "") {
                     if (prenomArtiste.length + nomArtiste.length > 0) {
 
-                        xhr.open("GET", "http://localhost:8080/ArtPublicMTL/index.php?Public_AJAX&action=rechercheArtiste&prenom=" + document.getElementById("prenomArtiste").value + "&nom=" + document.getElementById("nomArtiste").value);
+                        xhr.open("GET", "index.php?Public_AJAX&action=rechercheArtiste&prenom=" + document.getElementById("prenomArtiste").value + "&nom=" + document.getElementById("nomArtiste").value);
                         //xhr.open("GET", http://e1595242.webdev.cmaisonneuve.qc.ca/ArtPublicMTL/index.php?Public_AJAX&action=recherchePrenom&prenom="+document.getElementById("prenomArtiste").value);
 
                         xhr.addEventListener("readystatechange", function () {
@@ -60,7 +60,7 @@
             if (xhr) {
                 if (nomCollectif.value != "") {
 
-                    xhr.open("GET", "http://localhost:8080/ArtPublicMTL/index.php?Public_AJAX&action=rechercheCollectif&nomCollectif=" + nomCollectif.value);
+                    xhr.open("GET", "index.php?Public_AJAX&action=rechercheCollectif&nomCollectif=" + nomCollectif.value);
 
                     xhr.addEventListener("readystatechange", function () {
                         if (xhr.readyState === 4) {
@@ -171,7 +171,7 @@
         xhr = new XMLHttpRequest();
         if (xhr) {
 
-            xhr.open("GET", "http://localhost:8080/ArtPublicMTL/index.php?Public_AJAX&action=obtenirBio&prenomArtiste=" + prenomArtiste + "&nomArtiste=" + nomArtiste + "&nomCollectif=" + nomCollectif);
+            xhr.open("GET", "index.php?Public_AJAX&action=obtenirBio&prenomArtiste=" + prenomArtiste + "&nomArtiste=" + nomArtiste + "&nomCollectif=" + nomCollectif);
 
             xhr.addEventListener("readystatechange", function () {
                 if (xhr.readyState === 4) {
@@ -363,18 +363,19 @@
 		});
 		
 			$("#supprimerSoumission").click(function(){
+                  
 			// Suppression du record.
 			var xhr;
 			xhr = new XMLHttpRequest();
 			if(xhr){							
-
+                
 				xhr.open("GET", "index.php?AdminsAjax&action=supprimerOeuvre&id="+ document.getElementById("id").value);
+               
 
 				xhr.addEventListener("readystatechange", function(){					
 					if(xhr.readyState === 4){
 						if(xhr.status === 200){
 							if (xhr.responseText=="") { // la suppression a ete effectue
-
 								window.location.href = 'index.php?Admins&action=listeDesOeuvres';
 
 							} 
@@ -407,7 +408,7 @@
 
 	?>
     <!-- Message de confirmation-->
-    <div id="idMsgRetourSoumission" <?php if($admin){echo "style = 'margin-top: 100px;'";}?> >
+    <div id="idMsgRetourSoumission" <?php if($admin){echo "style = 'margin-top: 100px;'";}?>>
         <textarea rows="3" cols="50" id='msgRetourSoumission' disabled></textarea>
     </div>
     <div id="divSoumission" <?php if($admin){echo "style = 'margin-top: -10px;'";}?>>

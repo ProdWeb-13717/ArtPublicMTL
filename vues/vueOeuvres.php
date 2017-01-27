@@ -19,9 +19,10 @@
                           echo "<img class='photo' src='images/{$oeuvres["urlImage"]}'alt='{$oeuvres["titre"]}'/>
 
                             </a>
-                                <div class='hoverPhoto'>
-                                    <span class='titreOeuvres '><a href='./index.php?public&action=details&id={$oeuvres["id"]}'> {$oeuvres["titre"]}</a></span>
-                                    <span class='nomArtistes '><a href='./index.php?public&action=descriptionArtiste&id={$oeuvres["idArtiste"]}'>, {$oeuvres["prenom"]} {$oeuvres["nom"]}</a></span>
+            <div class='hoverPhoto flex row JCcenter '>
+                                    <span class='titreOeuvres '><a href='index.php?Public&action=details&id={$oeuvres["id"]}'> {$oeuvres["titre"]}</a></span>
+                                    <span class='nomArtistes '><a href='index.php?Public&action=descriptionArtiste&id={$oeuvres["idArtiste"]}'>, {$oeuvres["prenom"]} {$oeuvres["nom"]} {$oeuvres["nomCollectif"]}</a></span>
+
                                 </div>
                         </div>";
                         $cont++;

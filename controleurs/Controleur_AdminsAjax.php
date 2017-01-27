@@ -89,7 +89,7 @@
         
         public function importeOeuvre()
 		{
-            // 
+            // cette partie du controlleur sert à importer ou modifer les données directememt du JSON de la ville.
 			$modeleAdmins = new Modele_admins();
             
             // va chercher le JSON de la ville et le décode

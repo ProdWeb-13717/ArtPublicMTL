@@ -150,7 +150,7 @@
 		
 		
 		public function afficheListeOeuvres(){
-			$modeleOeuvres= new Modele_Oeuvres();
+			$modeleOeuvres= new Modele_oeuvres();
 			$data = $modeleOeuvres->obtenirTousOeuvresArtistes();
            	$this->afficheVue("vueOeuvres", $data);
 		}
@@ -200,11 +200,11 @@
             $this->afficheVue("vueOeuvresArtiste", $data);
 			//var_dump($data["urlImage"]);
 		}
-
+        // affiche les détails d'une oeuvre
 		public function afficheDetails($id){ 
 			$modelePublic = new Modele_public();
 			$data = $modelePublic->nomOeuvre($id);
-			$this->afficheVue("afficheDetails", $data);
+			$this->afficheVue("AfficheDetails", $data);
 
 		}
 
@@ -221,6 +221,8 @@
 			$this->afficheVue("arrondissements", $data);
 		}
 
+
+        // affiche la carte google
         public function afficheCarte(){
 			$modeleOeuvres= new Modele_oeuvres();
 			$data=$modeleOeuvres-> obtenirTousOeuvresArrondissement();

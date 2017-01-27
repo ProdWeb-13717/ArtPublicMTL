@@ -9,13 +9,7 @@
         ?>
             </script>
             <section>
-                <?php
-                   echo  "<h1 class='ligneBas'>" . $data[0]["arrondissement"] . "</h1>";
-                ?> </section>
-            <section class="flex row ">
-                <?php
-                $cont=0;
-            ?>
+
                     <script>
                         var x = 0;
                         var locations = [];
