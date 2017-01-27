@@ -60,7 +60,7 @@
                         
 					case "soumission":
 						$this->afficheVue("headerPasAccueil");
-						$this->afficheRecherche();
+						//$this->afficheRecherche();
 						$this->afficheSoumission();
 						break;		
                         
@@ -221,19 +221,19 @@
 			$this->afficheVue("arrondissements", $data);
 		}
 
+
         // affiche la carte google
         public function afficheCarte(){
 			$modeleOeuvres= new Modele_oeuvres();
 			$data=$modeleOeuvres-> obtenirTousOeuvresArrondissement();
 			$this->afficheVue("pageCarte", $data);
 		}
-        
+
     //afficher les titres de la page à propos
         public function affichePageApropos(){
             $modeleApropos = new Modele_propos();
             $data = $modeleApropos->obtenirTousPagePropos();
             $this->afficheVue("vuePropos", $data);
         }
-
 	}
 ?>

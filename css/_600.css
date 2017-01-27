@@ -1,0 +1,72 @@
+/*pour l'écran plus grand que 600px*/
+.photoAccueilMobile{
+	height: 700px;
+}
+
+		/*------- MENU BURGER -------*/
+.burger {
+	top: 37px;
+}
+
+.voirMenu{
+	top: 80px;
+	right: 30px;
+	font-size: 1.5em;
+	width: 150px;
+}
+		/*------- RECHERCHE -------*/
+#faSearch{
+	margin-top: 19px;
+	margin-right: 35px;
+}
+
+.voirFormRecherche{
+	top: 95px;
+	right: 80px;
+}
+
+.resultatRecherche{
+	width: 440px;
+	
+}
+
+/*------- PAGE DES ARTISTES -------*/
+#zoneDesArtistes{
+	margin-left: 10%;
+}
+
+/*http://www.webcis.com.br/dividir-texto-colunas-css3.html*/
+#zoneDesArtistes ul {
+    -moz-column-count: 3;
+    -moz-column-gap: 0px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 0px;
+}
+
+/*------- PAGE À PROPOS -------*/
+.pas_accueil .pageAPropos h1{
+	font-size: 2em;
+}
+
+.pas_accueil .pageAPropos p{
+	font-size: 1.2em;
+}
+
+/*------- CARTE -------*/
+.touteLaCarte #map{
+    height: 700px;
+    width: 410px;
+ 
+}
+
+#map {
+    height: 350px;
+    width: 580px
+}
+
+/*------- PAGE DES OEUVRES -------*/
+.pageUneOeuvre h1{
+	width: 95%;
+}
+
+

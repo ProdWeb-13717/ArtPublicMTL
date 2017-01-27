@@ -1,0 +1,53 @@
+/*pour l'écran plus grand que 1024px*/
+/*------- MENU -------*/
+#logo{
+	width: 90%;
+}
+
+#lienLogo{
+	width: 100%;
+}
+
+.ligne_logo{
+    top: 61px;
+}
+
+.itemMenu a,
+.pas_accueil .itemMenu a  {
+    font-size: 1.5em;
+}
+
+/*------- RECHERCHE -------*/
+#formRecherche {
+    margin-left: 73%;
+}
+
+#resultatRecherche {
+	right: 120px;
+	bottom: 280px;
+}
+
+/*------- PAGE DES OEUVRES -------*/
+.texteInfosOeuvres{
+	font-size: 1em;
+}
+
+#map {
+    width: 640px
+}
+
+/*------- PAGE DES ARTISTES -------*/
+/*http://www.webcis.com.br/dividir-texto-colunas-css3.html*/
+#zoneDesArtistes ul {
+    -moz-column-count: 3;
+    -moz-column-gap: 45px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 45px;
+}
+
+/*------- CARTE -------*/
+.touteLaCarte #map{
+    height: 700px;
+    width: 650px;
+ 
+}

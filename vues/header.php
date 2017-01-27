@@ -21,16 +21,16 @@ $(document).ready(function(){
 		var usedImages = {};
 		var usedImagesCount = 0;
 		//(min-width: 600px)
-		//Commencer la page d'accueil avec le fond de page blac pour les mobiles et donner le carrousel pour les écrans plus grands que 600px
-		if(window.screen.width > 600){
+		//Commencer la page d'accueil avec le fond de page blac pour les mobiles et donner le carrousel pour les écrans plus grands que 800px
+		if(window.screen.width >= 800){
 			$("body").css("background-image", "url(" + backgroundPath + displayImage() + ")");
 		} else{
 			$("body").css("background-image", "none");
 		}
 		// changement de toile de fond a tous les 6 secondes.
 		var timer = setInterval(function() {
-			//Ne pas continuer le carrousel pour les écrans plus petit que 600px
-			if(window.screen.width > 600)
+			//Ne pas continuer le carrousel pour les écrans plus petit que 800px
+			if(window.screen.width >= 800)
 			{
 				$("body").css("background-image", "url(" + backgroundPath + displayImage() + ")");
 			}
